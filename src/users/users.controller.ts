@@ -15,7 +15,14 @@ export class UsersController {
 
     @UseGuards(AuthenticatedGuard)
     @Get('/protected')
-    getHello(@Request() request): string {
+    getHello(@Request() request) {
         return request.user
+    }
+
+    @Get('/logout')
+    logout(@Request() request) {
+        request.session.destroy()
+
+        return { status: 200 }
     }
 }
