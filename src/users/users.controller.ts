@@ -18,11 +18,4 @@ export class UsersController {
     getHello(@Request() request): string {
         return request.user
     }
-
-    @Get('/test')
-    getTest() {
-        return {
-            msg: 'ok',
-        }
-    }
 }
