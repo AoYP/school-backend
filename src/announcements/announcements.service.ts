@@ -22,6 +22,6 @@ export class AnnouncementsService {
                 throw error
             })
 
-        return { status: 400 }
+        return { status: 200 }
     }
 }
